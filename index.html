@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bright Future College - Student Records</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bright Future College</h1>
+    <h2>Student Records (from JSON)</h2>
+
+    <div id="studentTable"></div>
+
+    <script>
+       
+        fetch('students.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                displayStudents(data.students);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('studentTable').innerHTML =
+                    '<p style="color: red">Error loading student data.</p>';
+            });
+
+        let html = '<table>';
+        html += '<tr><th>ID</th><th>Name</th><th>Gender</th><th>Age</th><th>Department</th><th>Email</th></tr>';
+
+        students.forEach(student => {
+            html += `<tr>
+                    <td>${student.id}</td>
+                    <td>${student.name}</td>
+                    <td>${student.gender}</td>
+                    <td>${student.age}</td>
+                    <td>${student.department}</td>
+                    <td>${student.email}</td>
+                </tr>`;
+        });
+
+        html += '</table>';
+        document.getElementById('studentTable').innerHTML = html;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+{
+    "college": "Bright Future College",
+    "totalStudents": 2,
+    "students": [
+        {
+            "id": 101,
+            "name": "Ahmed Khan",
+            "gender": "Male",
+            "age": 20,
+            "department": "Computer Science",
+            "email": "ahmed@brightfuture.edu"
+        },
+        {
+            "id": 102,
+            "name": "Fatima Ali",
+            "gender": "Female",
+            "age": 19,
+            "department": "Mathematics",
+            "email": "fatima@brightfuture.edu"
+        }
+    ]
+}
