@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE students SYSTEM "student.dtd">
+<students>
+    <student>
+        <id>101</id>
+        <name>Ahmed Khan</name>
+        <gender>Male</gender>
+        <age>20</age>
+        <department>Computer Science</department>
+        <email>ahmed@gmail.com</email>
+    </student>
+    <student>
+        <id>102</id>
+        <name>Fatima Ali</name>
+        <gender>Female</gender>
+        <age>19</age>
+        <department>Mathematics</department>
+        <email>fatima@gmail.com</email>
+        <!-- Total 10 students tak add kar sakte hain -->
+    </student>
+</students>
